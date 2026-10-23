@@ -71,7 +71,7 @@ footer p{margin:.3rem 0}
 <main>
 <section class="fr" lang="fr">
 <h1>Politique de confidentialité</h1>
-<p class="meta"><b>Version 3 — 23 octobre 2026</b><br>Historique : v3 (23 octobre 2026) — ville de tournage ; v2 (9 octobre 2026) — messages au support ; v1 (8 octobre 2026) — première rédaction.</p>
+<p class="meta"><b>Version 4 — 24 octobre 2026</b><br>Historique : v4 (24 octobre 2026) — notifications push ; v3 (23 octobre 2026) — ville de tournage ; v2 (9 octobre 2026) — messages au support ; v1 (8 octobre 2026) — première rédaction.</p>
 
 <p>Cette politique explique quelles données personnelles l’application mobile <strong>BuzzCut</strong> (iOS et Android) traite, pourquoi, pendant combien de temps, et quels sont vos droits. Elle est rédigée conformément au Règlement général sur la protection des données (RGPD, règlement (UE) 2016/679) et à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée.</p>
 <p>En deux mots : BuzzCut ne demande ni e-mail, ni numéro de téléphone, ni mot de passe pour créer un compte (un moyen de vous répondre n’est demandé, facultativement, que si vous nous écrivez depuis le formulaire Support). Il n’y a pas de publicité, pas de suivi entre applications, pas de kit d’analyse d’audience (analytics), pas de position précise (seul le nom de la ville où vous filmez, si vous l’autorisez) et pas d’accès à vos contacts. Nous conservons le strict nécessaire pour fabriquer vos films, et nous effaçons les vidéos rapidement.</p>
@@ -134,11 +134,11 @@ footer p{margin:.3rem 0}
 </div>
 
 <div class="cat">
-<h3>Notifications « film prêt » (fonction prévue)</h3>
-<p><b>Données :</b> un jeton de notification push propre à votre appareil, délivré par le service Firebase Cloud Messaging (FCM) de Google Ireland Limited, que l’éditeur envisage d’utiliser ; sur iOS, l’acheminement final passe par le service de notifications d’Apple (APNs).</p>
-<p><b>Finalité :</b> vous prévenir quand un film est prêt.</p>
-<p><b>Base légale :</b> consentement, donné lorsque vous autorisez les notifications dans l’application ou dans les réglages du téléphone ; retirable à tout moment par les mêmes réglages.</p>
-<p><b>Précision :</b> cette fonction n’est pas encore active. Le jeton ne contient aucune information sur votre identité ; il est effacé lorsque vous retirez l’autorisation ou supprimez votre compte.</p>
+<h3>Notifications push</h3>
+<p><b>Données :</b> un jeton de notification propre à l’installation de l’application sur votre appareil, délivré par le service Firebase Cloud Messaging (FCM) de Google Ireland Limited (le kit Firebase crée pour cela un identifiant d’installation, sans lien avec votre identité) ; sur iOS, l’acheminement final passe par le service de notifications d’Apple (APNs). Le serveur enregistre ce jeton avec votre compte et le type d’appareil (Android ou iOS), seulement tant que le téléphone autorise les notifications de l’application : sans autorisation, l’application ne l’envoie pas et demande au serveur de l’oublier. Pour chaque notification, il transmet à Firebase : le jeton, le type de notification, l’identifiant et le nom de la BuzzRoom, l’identifiant du film le cas échéant, et selon le cas le niveau de batterie (50 % ou 10 %) ou le nombre d’heures avant la suppression du film. Votre pseudonyme et celui des autres membres ne sont jamais transmis. Le texte de la notification est écrit par votre téléphone, dans la langue de l’application lorsque le téléphone la connaît (iOS, Android 13 et suivants, langue choisie dans les réglages du téléphone), sinon dans celle du téléphone. Pour ne pas vous prévenir de la suppression d’un film que vous avez déjà gardé, le serveur note que vous avez téléchargé le film en entier, avec la date (un simple visionnage ne compte pas).</p>
+<p><b>Finalité :</b> vous prévenir quand le film d’une de vos BuzzRooms est prêt, 6 heures avant sa suppression si vous ne l’avez pas téléchargé, quand quelqu’un rejoint votre BuzzRoom, et quand la batterie de la BuzzRoom passe sous 50 % puis sous 10 %.</p>
+<p><b>Base légale :</b> consentement, donné en autorisant les notifications lorsque l’application le demande (une seule fois, après votre premier clip) ou dans les réglages du téléphone ; retirable à tout moment dans les réglages du téléphone (Réglages → Applications → BuzzCut → Notifications sur Android, Réglages → BuzzCut → Notifications sur iOS). Sans autorisation, aucune notification n’est affichée et l’application fonctionne de la même façon.</p>
+<p><b>Précision :</b> le jeton ne contient aucune information sur votre identité. Une notification n’est pas conservée par le serveur après son envoi.</p>
 </div>
 
 <div class="cat">
@@ -171,7 +171,7 @@ footer p{margin:.3rem 0}
 <li>pas de position précise ni d’historique de déplacements : seul le nom de la ville de chaque clip, si vous l’autorisez (voir ci-dessus) ;</li>
 <li>pas d’accès à vos contacts ;</li>
 <li>pas d’identifiant publicitaire, pas de publicité, pas de suivi entre applications ou sites ;</li>
-<li>aucun kit d’analyse d’audience (analytics), aucun SDK tiers de mesure ou de publicité ;</li>
+<li>aucun kit d’analyse d’audience (analytics), aucun SDK tiers de mesure ou de publicité (le kit Firebase Cloud Messaging ne sert qu’aux notifications) ;</li>
 <li>aucune décision automatisée produisant des effets juridiques à votre égard, aucun profilage.</li>
 </ul>
 
@@ -183,7 +183,8 @@ footer p{margin:.3rem 0}
 <li><strong>Ville de tournage et décalage horaire</strong> : jusqu’à la fabrication du film, puis effacés du serveur (ils ne restent qu’incrustés dans le film).</li>
 <li><strong>Films</strong> : 48 heures après leur fabrication, puis supprimés du serveur.</li>
 <li><strong>BuzzRooms, appartenance, horodatages, temps par cut</strong> : tant que la BuzzRoom existe, et au plus tard à la suppression de votre compte pour ce qui vous concerne.</li>
-<li><strong>Jetons de notification</strong> : jusqu’au retrait de l’autorisation ou à la suppression du compte.</li>
+<li><strong>Jetons de notification</strong> : jusqu’à la suppression du compte, ou plus tôt lorsque Firebase signale le jeton comme invalide (application désinstallée, jeton renouvelé par le téléphone). Retirer l’autorisation dans les réglages du téléphone arrête l’affichage des notifications, et le jeton est effacé du serveur au lancement suivant de l’application.</li>
+<li><strong>Téléchargements complets d’un film</strong> (pour les notifications) : effacés avec le film (48 heures après sa fabrication) ou avec votre compte.</li>
 <li><strong>Messages au support</strong> : <mark class="todo">À COMPLÉTER : durée de conservation des messages au support</mark> ; conservés après la suppression du compte, sans lien avec lui.</li>
 <li><strong>Journaux techniques</strong> : <mark class="todo">À COMPLÉTER : durée de conservation des journaux techniques du serveur (recommandation CNIL : 6 mois au plus, 12 mois maximum)</mark></li>
 <li><strong>Preuves d’achat</strong> (fonction future) : tant que le compte existe pour maintenir l’option débloquée ; les justificatifs comptables sont conservés le temps imposé par la loi (10 ans en France).</li>
@@ -194,7 +195,7 @@ footer p{margin:.3rem 0}
 <ul>
 <li><strong>Les autres membres de vos BuzzRooms</strong> voient votre pseudonyme, votre photo de profil, la photo de la BuzzRoom, et le film qui contient vos clips. Ils peuvent télécharger le film et le conserver.</li>
 <li><strong>L’hébergeur du serveur</strong>, qui stocke les données pour notre compte en qualité de sous-traitant : prestataire d’hébergement situé dans l’Union européenne (<mark class="todo">À COMPLÉTER : à préciser : nom, adresse et pays de l’hébergeur du serveur, par exemple OVH, France</mark>). Le serveur n’est pas encore en service ; cette politique sera mise à jour avec l’identité de l’hébergeur retenu.</li>
-<li><strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublin 4, Irlande), sous-traitant envisagé pour l’acheminement des notifications push via Firebase Cloud Messaging (fonction prévue) ; seul le jeton de notification lui est transmis.</li>
+<li><strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublin 4, Irlande), sous-traitant pour l’acheminement des notifications push via Firebase Cloud Messaging : il reçoit le jeton de notification, le type de notification, l’identifiant et le nom de la BuzzRoom, l’identifiant du film, et le niveau de batterie ou le nombre d’heures restantes (voir §3). Sur iOS, Apple (service APNs) achemine la notification jusqu’au téléphone.</li>
 <li><strong>Apple et Google</strong>, en tant qu’opérateurs des boutiques, pour les achats intégrés (fonction future), selon leurs propres politiques de confidentialité.</li>
 <li><strong>Google (Android) et Apple (iOS)</strong>, opérateurs du service de localisation du téléphone, auquel l’application demande le nom de la ville : ils reçoivent la position approximative, selon leurs propres politiques de confidentialité. Le serveur de BuzzCut ne reçoit que le nom de la ville.</li>
 </ul>
@@ -202,7 +203,7 @@ footer p{margin:.3rem 0}
 
 <h2 id="fr-6">6. Transferts hors de l’Union européenne</h2>
 <p>Les données sont hébergées dans l’Union européenne : prestataire d’hébergement situé dans l’Union européenne (<mark class="todo">À COMPLÉTER : à préciser : nom, adresse et pays de l’hébergeur du serveur, par exemple OVH, France</mark>). <strong>Aucun transfert de données hors de l’Union européenne n’a lieu tant que l’hébergeur est situé dans l’Union européenne.</strong> Si l’éditeur venait à changer d’hébergeur pour un prestataire situé hors de l’Union, cette politique serait mise à jour avec le mécanisme de transfert applicable.</p>
-<p>Pour les notifications push (fonction prévue), le sous-traitant envisagé est Google Ireland Limited, établie dans l’Union européenne. L’acheminement par Firebase Cloud Messaging peut impliquer un traitement aux États-Unis par des entités du groupe Google ; ces transferts sont encadrés par les clauses contractuelles types adoptées par la Commission européenne, intégrées aux conditions de traitement des données de Google, et par le cadre de protection des données UE–États-Unis (<em>EU–US Data Privacy Framework</em>) auquel Google déclare adhérer. Seul le jeton de notification, sans contenu personnel, est concerné.</p>
+<p>Pour les notifications push, le sous-traitant est Google Ireland Limited, établie dans l’Union européenne. L’acheminement par Firebase Cloud Messaging peut impliquer un traitement aux États-Unis par des entités du groupe Google ; ces transferts sont encadrés par les clauses contractuelles types adoptées par la Commission européenne, intégrées aux conditions de traitement des données de Google, et par le cadre de protection des données UE–États-Unis (<em>EU–US Data Privacy Framework</em>) auquel Google déclare adhérer. Sont concernés le jeton de notification et le contenu de la notification décrit au §3 (type, nom de la BuzzRoom, identifiants, niveau de batterie ou heures restantes), jamais votre pseudonyme.</p>
 
 <h2 id="fr-7">7. Vos droits</h2>
 <p>Vous disposez des droits suivants sur vos données :</p>
@@ -234,7 +235,7 @@ footer p{margin:.3rem 0}
 <p>Les échanges entre l’application et le serveur sont chiffrés (HTTPS/TLS). L’accès au serveur est restreint à l’éditeur. Les films sont supprimés automatiquement après 48 heures et les clips dès l’assemblage, ce qui limite la quantité de vidéos stockées à tout moment. Le compte étant anonyme, une fuite éventuelle n’exposerait ni nom, ni mot de passe, ni e-mail lié au compte (seul un moyen de réponse laissé volontairement dans un message au support pourrait l’être). Aucun système n’est toutefois infaillible ; en cas de violation de données présentant un risque pour vous, nous en informerons la CNIL et, si le risque est élevé, les personnes concernées, conformément aux articles 33 et 34 du RGPD.</p>
 
 <h2 id="fr-12">12. Modifications</h2>
-<p>Cette politique peut évoluer, notamment lorsque les notifications et les achats intégrés seront activés. Chaque version est numérotée et datée en haut de la page, avec un historique des changements. En cas de modification substantielle, l’application vous en informera.</p>
+<p>Cette politique peut évoluer, notamment lorsque les achats intégrés seront activés. Chaque version est numérotée et datée en haut de la page, avec un historique des changements. En cas de modification substantielle, l’application vous en informera.</p>
 
 <h2 id="fr-13">13. Contact</h2>
 <p>Éditeur de BuzzCut : un particulier, développeur indépendant établi en France, qui édite BuzzCut à titre non professionnel.<br>Contact : <mark class="todo">À COMPLÉTER : adresse e-mail de contact / support</mark></p>
@@ -243,7 +244,7 @@ footer p{margin:.3rem 0}
 </section>
 <section class="en" lang="en">
 <h1>Privacy policy</h1>
-<p class="meta"><b>Version 3 — 23 October 2026</b><br>Changelog: v3 (23 October 2026) — city of filming; v2 (9 October 2026) — support messages; v1 (8 October 2026) — first draft.</p>
+<p class="meta"><b>Version 4 — 24 October 2026</b><br>Changelog: v4 (24 October 2026) — push notifications; v3 (23 October 2026) — city of filming; v2 (9 October 2026) — support messages; v1 (8 October 2026) — first draft.</p>
 
 <p>This policy explains which personal data the <strong>BuzzCut</strong> mobile app (iOS and Android) processes, why, for how long, and what your rights are. It is written in accordance with the General Data Protection Regulation (GDPR, Regulation (EU) 2016/679) and the French Data Protection Act (<em>loi « Informatique et Libertés »</em> of 6 January 1978, as amended).</p>
 <p>In short: BuzzCut asks for no e-mail, no phone number and no password to create an account (a way to answer you is asked for, optionally, only if you write to us from the Support form). There are no ads, no cross-app tracking, no analytics SDK, no precise location (only the name of the city you film in, if you allow it) and no access to your contacts. We keep the bare minimum needed to make your films, and we delete videos quickly.</p>
@@ -306,11 +307,11 @@ footer p{margin:.3rem 0}
 </div>
 
 <div class="cat">
-<h3>“Film ready” notifications (planned feature)</h3>
-<p><b>Data:</b> a push notification token specific to your device, issued by the Firebase Cloud Messaging (FCM) service of Google Ireland Limited, which the publisher plans to use; on iOS, final delivery goes through Apple’s notification service (APNs).</p>
-<p><b>Purpose:</b> telling you when a film is ready.</p>
-<p><b>Legal basis:</b> consent, given when you allow notifications in the app or in the phone settings; withdrawable at any time through the same settings.</p>
-<p><b>Note:</b> this feature is not active yet. The token holds no information about your identity; it is erased when you withdraw permission or delete your account.</p>
+<h3>Push notifications</h3>
+<p><b>Data:</b> a notification token specific to the app’s installation on your device, issued by the Firebase Cloud Messaging (FCM) service of Google Ireland Limited (the Firebase SDK creates an installation id for this, unrelated to your identity); on iOS, final delivery goes through Apple’s notification service (APNs). The server stores this token with your account and the kind of device (Android or iOS), only while the phone allows the app’s notifications: without permission, the app does not send it and asks the server to forget it. For each notification it sends Firebase: the token, the kind of notification, the BuzzRoom’s id and name, the film’s id where relevant, and, depending on the case, the battery level (50% or 10%) or the number of hours before the film is deleted. Neither your username nor the other members’ is ever sent. The text of the notification is written by your phone, in the app’s language when the phone knows it (iOS, Android 13 and later, language chosen in the phone settings), otherwise in the phone’s language. So as not to warn you of the deletion of a film you already kept, the server records that you downloaded the whole film, with the date (merely watching it does not count).</p>
+<p><b>Purpose:</b> telling you when the film of one of your BuzzRooms is ready, 6 hours before it is deleted if you have not downloaded it, when someone joins your BuzzRoom, and when the BuzzRoom’s battery falls below 50% and then below 10%.</p>
+<p><b>Legal basis:</b> consent, given by allowing notifications when the app asks (once, after your first clip) or in the phone settings; withdrawable at any time in the phone settings (Settings → Apps → BuzzCut → Notifications on Android, Settings → BuzzCut → Notifications on iOS). Without permission no notification is shown and the app works the same.</p>
+<p><b>Note:</b> the token holds no information about your identity. A notification is not kept by the server once sent.</p>
 </div>
 
 <div class="cat">
@@ -343,7 +344,7 @@ footer p{margin:.3rem 0}
 <li>no precise location and no movement history: only the name of each clip’s city, if you allow it (see above);</li>
 <li>no access to your contacts;</li>
 <li>no advertising identifier, no ads, no tracking across apps or websites;</li>
-<li>no analytics SDK, no third-party measurement or advertising SDK;</li>
+<li>no analytics SDK, no third-party measurement or advertising SDK (the Firebase Cloud Messaging SDK only serves notifications);</li>
 <li>no automated decision with legal effects on you, no profiling.</li>
 </ul>
 
@@ -355,7 +356,8 @@ footer p{margin:.3rem 0}
 <li><strong>City of filming and time zone offset</strong>: until the film is made, then deleted from the server (they remain only burnt into the film).</li>
 <li><strong>Films</strong>: 48 hours after they are made, then deleted from the server.</li>
 <li><strong>BuzzRooms, membership, timestamps, time per cut</strong>: as long as the BuzzRoom exists, and at the latest when your account is deleted for what concerns you.</li>
-<li><strong>Notification tokens</strong>: until permission is withdrawn or the account deleted.</li>
+<li><strong>Notification tokens</strong>: until the account is deleted, or earlier when Firebase reports the token as invalid (app uninstalled, token renewed by the phone). Withdrawing permission in the phone settings stops notifications from being shown, and the token is erased from the server the next time the app is opened.</li>
+<li><strong>Full downloads of a film</strong> (for notifications): erased with the film (48 hours after it is made) or with your account.</li>
 <li><strong>Support messages</strong>: <mark class="todo">TO BE COMPLETED: retention period of support messages</mark>; kept after the account is deleted, unlinked from it.</li>
 <li><strong>Technical logs</strong>: <mark class="todo">TO BE COMPLETED: retention period of the server technical logs (CNIL recommendation: 6 months at most, 12 months maximum)</mark></li>
 <li><strong>Proofs of purchase</strong> (future feature): as long as the account exists, to keep the option unlocked; accounting records are kept for the period required by law (10 years in France).</li>
@@ -366,7 +368,7 @@ footer p{margin:.3rem 0}
 <ul>
 <li><strong>The other members of your BuzzRooms</strong> see your username, your profile photo, the room photo, and the film that contains your clips. They can download the film and keep it.</li>
 <li><strong>The server host</strong>, which stores the data on our behalf as a processor: hosting provider located in the European Union (<mark class="todo">TO BE COMPLETED: to be specified: name, address and country of the server host, for example OVH, France</mark>). The server is not in service yet; this policy will be updated with the identity of the chosen host.</li>
-<li><strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublin 4, Ireland), planned processor for delivering push notifications through Firebase Cloud Messaging (planned feature); only the notification token is sent to it.</li>
+<li><strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublin 4, Ireland), processor for delivering push notifications through Firebase Cloud Messaging: it receives the notification token, the kind of notification, the BuzzRoom’s id and name, the film’s id, and the battery level or the hours left (see §3). On iOS, Apple (the APNs service) delivers the notification to the phone.</li>
 <li><strong>Apple and Google</strong>, as store operators, for in-app purchases (future feature), under their own privacy policies.</li>
 <li><strong>Google (Android) and Apple (iOS)</strong>, as operators of the phone’s location service, which the app asks for the city name: they receive the approximate position, under their own privacy policies. BuzzCut’s server only receives the city name.</li>
 </ul>
@@ -374,7 +376,7 @@ footer p{margin:.3rem 0}
 
 <h2 id="en-6">6. Transfers outside the European Union</h2>
 <p>Data is hosted in the European Union: hosting provider located in the European Union (<mark class="todo">TO BE COMPLETED: to be specified: name, address and country of the server host, for example OVH, France</mark>). <strong>No transfer of data outside the European Union takes place as long as the host is located in the European Union.</strong> Should the publisher move to a host located outside the EU, this policy would be updated with the applicable transfer mechanism.</p>
-<p>For push notifications (planned feature), the planned processor is Google Ireland Limited, established in the European Union. Delivery through Firebase Cloud Messaging may involve processing in the United States by Google group entities; such transfers are governed by the standard contractual clauses adopted by the European Commission, incorporated into Google’s data processing terms, and by the EU–US Data Privacy Framework, to which Google states it adheres. Only the notification token, with no personal content, is concerned.</p>
+<p>For push notifications, the processor is Google Ireland Limited, established in the European Union. Delivery through Firebase Cloud Messaging may involve processing in the United States by Google group entities; such transfers are governed by the standard contractual clauses adopted by the European Commission, incorporated into Google’s data processing terms, and by the EU–US Data Privacy Framework, to which Google states it adheres. They concern the notification token and the content of the notification described in §3 (kind, BuzzRoom name, ids, battery level or hours left), never your username.</p>
 
 <h2 id="en-7">7. Your rights</h2>
 <p>You have the following rights over your data:</p>
@@ -406,7 +408,7 @@ footer p{margin:.3rem 0}
 <p>Exchanges between the app and the server are encrypted (HTTPS/TLS). Access to the server is restricted to the publisher. Films are deleted automatically after 48 hours and clips as soon as they are assembled, which limits the amount of video stored at any time. Because the account is anonymous, a breach would expose no name, no password and no e-mail tied to the account (only a way to answer you, given on purpose in a support message, could be). No system is infallible, however; in the event of a data breach that puts you at risk, we will notify the CNIL and, if the risk is high, the people concerned, as required by Articles 33 and 34 GDPR.</p>
 
 <h2 id="en-12">12. Changes</h2>
-<p>This policy may change, in particular when notifications and in-app purchases are switched on. Each version is numbered and dated at the top of the page, with a changelog. The app will inform you of any material change.</p>
+<p>This policy may change, in particular when in-app purchases are switched on. Each version is numbered and dated at the top of the page, with a changelog. The app will inform you of any material change.</p>
 
 <h2 id="en-13">13. Contact</h2>
 <p>Publisher of BuzzCut: a private individual, an independent developer established in France, who publishes BuzzCut on a non-professional basis.<br>Contact: <mark class="todo">TO BE COMPLETED: contact / support e-mail address</mark></p>
