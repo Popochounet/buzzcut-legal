@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#17130E">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Politique de confidentialité de l’application BuzzCut (RGPD). / Privacy policy of the BuzzCut app (GDPR).">
+<title>Politique de confidentialité — BuzzCut</title>
+<style>
+:root{--bg:#17130E;--fg:#F1E6D2;--amber:#FFB23E;--dim:#B9AD98;--rule:#3A3227;--panel:#1F1A13}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);font-family:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace;font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+body{margin:0 auto;padding:0 16px 56px;max-width:76ch;background:var(--bg)}
+a{color:var(--amber);text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+h1,h2,h3{line-height:1.25;font-weight:700}
+h1{font-size:1.5rem;margin:1.2rem 0 .4rem;color:var(--amber)}
+h1::before{content:"> ";color:var(--dim)}
+h2{font-size:1.15rem;margin:2.2rem 0 .6rem;padding-top:.6rem;border-top:1px solid var(--rule)}
+h3{font-size:1rem;margin:1.4rem 0 .3rem}
+p,li{max-width:70ch}
+ul,ol{padding-left:1.4em}
+li{margin:.25em 0}
+code{color:var(--amber);background:var(--panel);padding:0 .3em;border-radius:3px}
+.draft{margin:0 -16px;padding:.55rem 16px;background:var(--amber);color:var(--bg);font-weight:700;font-size:.9rem;text-align:center}
+.draft::before{content:"⚠ "}
+header.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding:.9rem 0;border-bottom:1px solid var(--rule)}
+header.top .brand{color:var(--fg);font-weight:700;text-decoration:none;letter-spacing:.04em}
+header.top .brand span{color:var(--amber)}
+nav.pages{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.9rem}
+nav.pages a[aria-current="page"]{color:var(--fg);text-decoration:none;border-bottom:2px solid var(--amber)}
+.toggle{display:inline-flex;border:1px solid var(--amber);border-radius:4px;overflow:hidden}
+.toggle button{font:inherit;font-size:.85rem;font-weight:700;background:transparent;color:var(--amber);border:0;padding:.3rem .75rem;cursor:pointer;min-width:3.2rem}
+.toggle button+button{border-left:1px solid var(--amber)}
+.toggle button[aria-pressed="true"]{background:var(--amber);color:var(--bg)}
+.meta{color:var(--dim);font-size:.9rem;margin:0 0 1.4rem}
+.meta b{color:var(--fg)}
+.todo{display:inline;background:transparent;color:var(--amber);border:1px dashed var(--amber);padding:0 .3em;border-radius:3px;font-weight:700}
+.cat{border:1px solid var(--rule);border-left:3px solid var(--amber);background:var(--panel);padding:.2rem 1rem .6rem;margin:.9rem 0}
+.cat h3{margin:.7rem 0 .2rem}
+.cat p{margin:.3rem 0}
+.cat b{color:var(--amber);font-weight:700}
+.box{border:1px solid var(--rule);padding:.6rem 1rem;margin:1rem 0;background:var(--panel)}
+.tape{color:var(--dim);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin:1.6rem 0 0}
+.tape::before{content:"● REC  ";color:var(--amber)}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--dim);font-size:.85rem}
+footer p{margin:.3rem 0}
+.en{display:none}
+[data-lang="en"] .fr{display:none}
+[data-lang="en"] .en{display:revert}
+.hub a.card{display:block;border:1px solid var(--rule);border-left:3px solid var(--amber);background:var(--panel);padding:.8rem 1rem;margin:.8rem 0;text-decoration:none;color:var(--fg)}
+.hub a.card b{color:var(--amber);display:block}
+.hub a.card:hover,.hub a.card:focus-visible{border-color:var(--amber)}
+@media (max-width:480px){html{font-size:15px}h1{font-size:1.3rem}}
+@media print{.draft,header.top,.toggle{display:none}.en{display:revert}html{background:#fff;color:#000}}
+</style>
+<noscript><style>.en{display:revert}.toggle{display:none}</style></noscript>
+</head>
+<body>
+<p class="draft"><span class="fr" lang="fr">Projet de document — à faire relire par un juriste avant publication</span><span class="en" lang="en">Draft — to be reviewed by a lawyer before publication</span></p>
+<header class="top">
+  <a class="brand" href="index.html" data-nav="index.html">BUZZ<span>CUT</span></a>
+  <nav class="pages" aria-label="BuzzCut"> <a href="index.html" data-nav="index.html"><span class="fr" lang="fr">Accueil</span><span class="en" lang="en">Home</span></a> <a href="privacy.html" data-nav="privacy.html" aria-current="page"><span class="fr" lang="fr">Confidentialité</span><span class="en" lang="en">Privacy</span></a> <a href="terms.html" data-nav="terms.html"><span class="fr" lang="fr">CGU</span><span class="en" lang="en">Terms</span></a> <a href="notice.html" data-nav="notice.html"><span class="fr" lang="fr">Mentions légales</span><span class="en" lang="en">Legal notice</span></a> </nav>
+  <div class="toggle" role="group" aria-label="Langue / Language">
+    <button type="button" data-set-lang="fr" aria-pressed="true" lang="fr">FR</button>
+    <button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+  </div>
+</header>
+<main>
+<section class="fr" lang="fr">
+<h1>Politique de confidentialité</h1>
+<p class="meta"><b>Version 3 — 23 octobre 2026</b><br>Historique : v3 (23 octobre 2026) — ville de tournage ; v2 (9 octobre 2026) — messages au support ; v1 (8 octobre 2026) — première rédaction.</p>
+
+<p>Cette politique explique quelles données personnelles l’application mobile <strong>BuzzCut</strong> (iOS et Android) traite, pourquoi, pendant combien de temps, et quels sont vos droits. Elle est rédigée conformément au Règlement général sur la protection des données (RGPD, règlement (UE) 2016/679) et à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée.</p>
+<p>En deux mots : BuzzCut ne demande ni e-mail, ni numéro de téléphone, ni mot de passe pour créer un compte (un moyen de vous répondre n’est demandé, facultativement, que si vous nous écrivez depuis le formulaire Support). Il n’y a pas de publicité, pas de suivi entre applications, pas de kit d’analyse d’audience (analytics), pas de position précise (seul le nom de la ville où vous filmez, si vous l’autorisez) et pas d’accès à vos contacts. Nous conservons le strict nécessaire pour fabriquer vos films, et nous effaçons les vidéos rapidement.</p>
+
+<h2 id="fr-1">1. Responsable du traitement</h2>
+<p>Le responsable du traitement est l’éditeur de l’application : un particulier, développeur indépendant établi en France, qui édite BuzzCut à titre non professionnel.</p>
+<p>Conformément à l’article 6-III-2 de la loi n° 2004-575 du 21 juin 2004 (LCEN), l’éditeur, qui agit à titre non professionnel, ne publie pas son nom ni son adresse ; ces éléments d’identification ont été communiqués aux hébergeurs, qui les tiennent à la disposition des autorités. Le seul contact public est l’adresse e-mail suivante : <mark class="todo">À COMPLÉTER : adresse e-mail de contact / support</mark>.</p>
+<p>Aucun délégué à la protection des données (DPO) n’a été désigné, la désignation n’étant pas obligatoire pour cette activité. Toute question relative à vos données peut être adressée au contact ci-dessus.</p>
+
+<h2 id="fr-2">2. Ce que fait BuzzCut</h2>
+<p>BuzzCut permet à un groupe de personnes (une « BuzzRoom ») de filmer de courts clips vidéo à partir d’une « batterie » de temps d’enregistrement partagée. Quand la batterie est vide, le serveur assemble tous les clips en un seul film (un « BuzzCut », au format 720 × 1280) avec un habillage caméscope incrusté (nom de la BuzzRoom, logo) et un générique de fin. Le film est disponible aux membres pendant 48 heures, puis supprimé du serveur. Les copies téléchargées restent sur les téléphones.</p>
+
+<h2 id="fr-3">3. Données traitées, finalités et bases légales</h2>
+<p>Les bases légales citées renvoient à l’article 6, paragraphe 1, du RGPD : <em>exécution du contrat</em> (point b : fournir le service que vous demandez en utilisant l’application), <em>consentement</em> (point a) et <em>intérêt légitime</em> (point f).</p>
+
+<div class="cat">
+<h3>Compte</h3>
+<p><b>Données :</b> pseudonyme choisi par vous, identifiant de compte anonyme généré par l’application et stocké sur votre téléphone, date de création du compte.</p>
+<p><b>Finalité :</b> créer et reconnaître votre compte, vous afficher aux autres membres sous votre pseudonyme.</p>
+<p><b>Base légale :</b> exécution du contrat.</p>
+<p><b>Précision :</b> aucun e-mail, numéro de téléphone ou mot de passe n’est collecté pour le compte. Le pseudonyme est libre ; évitez d’y mettre votre nom complet si vous ne souhaitez pas être identifiable par les autres membres.</p>
+</div>
+
+<div class="cat">
+<h3>Photos de profil et de BuzzRoom</h3>
+<p><b>Données :</b> la photo de profil que vous choisissez et, si vous en ajoutez une, la photo d’une BuzzRoom. Ces photos sont facultatives.</p>
+<p><b>Finalité :</b> personnaliser votre profil et vos BuzzRooms ; afficher ces images aux membres.</p>
+<p><b>Base légale :</b> consentement, donné en ajoutant la photo et retirable à tout moment en la supprimant ou en la remplaçant.</p>
+</div>
+
+<div class="cat">
+<h3>Clips vidéo</h3>
+<p><b>Données :</b> les clips (image et son) que vous filmez dans une BuzzRoom, avec leur durée, leur horodatage et le temps de batterie utilisé par cut. Ces clips peuvent contenir l’image et la voix d’autres personnes : voir la section 9 et les <a href="terms.html" data-nav="terms.html">conditions d’utilisation</a>.</p>
+<p><b>Finalité :</b> assembler le film de la BuzzRoom.</p>
+<p><b>Base légale :</b> exécution du contrat.</p>
+<p><b>Précision :</b> les clips sont transitoires : ils sont supprimés du serveur dès que le film est fabriqué, ou lorsque vous êtes exclu de la BuzzRoom par son leader.</p>
+</div>
+
+<div class="cat">
+<h3>Ville de tournage</h3>
+<p><b>Données :</b> le nom de la ville où chaque clip est filmé, et le décalage horaire de votre téléphone, pour imprimer sur le clip sa ville et sa date locale, comme un caméscope.</p>
+<p><b>Finalité :</b> l’habillage du film (ville et date de chaque clip).</p>
+<p><b>Base légale :</b> votre consentement, donné par l’autorisation de localisation du téléphone, demandée une seule fois et retirable à tout moment dans les réglages du téléphone (<em>Profil → Réglages du téléphone</em>). Sans elle, les clips portent la mention UNKNOWN.</p>
+<p><b>Précision :</b> la localisation, approximative, n’est utilisée que pendant que l’écran d’enregistrement est ouvert. Pour obtenir le nom de la ville, le service de localisation du téléphone envoie cette position approximative à Google (Android) ou à Apple (iOS), qui renvoient le nom de la ville ; seul ce nom est envoyé à BuzzCut, jamais votre position. Il est incrusté dans le film et effacé du serveur dès que le film est fabriqué.</p>
+</div>
+
+<div class="cat">
+<h3>Films (BuzzCuts)</h3>
+<p><b>Données :</b> le film assemblé à partir des clips des membres, avec l’habillage incrusté (nom de la BuzzRoom, ville et date de chaque clip, niveau de batterie, BUZZCUT) et le générique de fin.</p>
+<p><b>Finalité :</b> permettre aux membres de la BuzzRoom de regarder et de télécharger le film.</p>
+<p><b>Base légale :</b> exécution du contrat.</p>
+<p><b>Précision :</b> le film est supprimé du serveur 48 heures après sa fabrication. Les copies téléchargées par les membres sur leurs téléphones ne sont plus sous notre contrôle.</p>
+</div>
+
+<div class="cat">
+<h3>BuzzRooms et activité</h3>
+<p><b>Données :</b> les BuzzRooms dont vous êtes membre ou leader, le nom et la photo de la BuzzRoom, l’état de la batterie, les horodatages (création, cuts, fabrication du film), les temps d’enregistrement par cut.</p>
+<p><b>Finalité :</b> faire fonctionner la BuzzRoom (partager la batterie, savoir qui est membre, déclencher la fabrication du film, afficher le film aux bonnes personnes).</p>
+<p><b>Base légale :</b> exécution du contrat.</p>
+</div>
+
+<div class="cat">
+<h3>Notifications « film prêt » (fonction prévue)</h3>
+<p><b>Données :</b> un jeton de notification push propre à votre appareil, délivré par le service Firebase Cloud Messaging (FCM) de Google Ireland Limited, que l’éditeur envisage d’utiliser ; sur iOS, l’acheminement final passe par le service de notifications d’Apple (APNs).</p>
+<p><b>Finalité :</b> vous prévenir quand un film est prêt.</p>
+<p><b>Base légale :</b> consentement, donné lorsque vous autorisez les notifications dans l’application ou dans les réglages du téléphone ; retirable à tout moment par les mêmes réglages.</p>
+<p><b>Précision :</b> cette fonction n’est pas encore active. Le jeton ne contient aucune information sur votre identité ; il est effacé lorsque vous retirez l’autorisation ou supprimez votre compte.</p>
+</div>
+
+<div class="cat">
+<h3>Données techniques du serveur</h3>
+<p><b>Données :</b> adresse IP de votre appareil, horodatage et nature des requêtes, type d’appareil ou de système, codes d’erreur, dans les journaux techniques du serveur.</p>
+<p><b>Finalité :</b> sécurité du service (détection d’abus, de pannes et d’attaques), diagnostic technique.</p>
+<p><b>Base légale :</b> intérêt légitime à assurer la sécurité et le bon fonctionnement du service. Ces journaux ne servent ni au profilage, ni à la publicité, ni à des statistiques d’usage.</p>
+<p><b>Conservation :</b> <mark class="todo">À COMPLÉTER : durée de conservation des journaux techniques du serveur (recommandation CNIL : 6 mois au plus, 12 mois maximum)</mark></p>
+</div>
+
+<div class="cat">
+<h3>Messages au support</h3>
+<p><b>Données :</b> lorsque vous utilisez le formulaire Support (Profil &gt; Support) : le type de message (bug, idée, aide), le texte que vous écrivez, et, si vous choisissez de le donner, un moyen de vous répondre (souvent une adresse e-mail). L’application y joint automatiquement, et l’affiche sous le formulaire avant l’envoi : la version de l’application, le système et sa version (par exemple Android 15), la langue de l’application et l’identifiant de votre compte. Le message est enregistré avec sa date d’envoi.</p>
+<p><b>Finalité :</b> répondre à votre demande, corriger les bugs signalés, améliorer l’application. Un nombre limité de messages par heure est accepté par compte, pour éviter les abus.</p>
+<p><b>Base légale :</b> intérêt légitime à assister les utilisateurs et à corriger l’application ; le moyen de vous répondre est facultatif et fourni à votre initiative.</p>
+<p><b>Conservation :</b> <mark class="todo">À COMPLÉTER : durée de conservation des messages au support (par exemple 12 mois après le dernier échange)</mark>. <strong>La suppression de votre compte ne supprime pas les messages déjà envoyés au support</strong> : ils ne sont plus rattachés à un compte, mais leur contenu, et le moyen de vous répondre s’il a été donné, restent conservés jusqu’à la fin de cette durée. Vous pouvez en demander l’effacement en nous écrivant (section 7).</p>
+<p>Aucun e-mail n’est envoyé automatiquement ; le message n’est transmis à aucun tiers.</p>
+</div>
+
+<div class="cat">
+<h3>Achats intégrés (fonction future)</h3>
+<p><b>Données :</b> lorsqu’ils seront proposés, les achats uniques (par exemple un film « Clean » sans habillage, ou des styles visuels) seront réalisés par l’App Store d’Apple ou Google Play. BuzzCut ne reçoit aucune donnée bancaire : seulement une preuve d’achat (reçu ou droit d’accès) permettant de débloquer l’option sur votre compte.</p>
+<p><b>Finalité :</b> fournir l’option achetée.</p>
+<p><b>Base légale :</b> exécution du contrat ; obligations légales (comptables et fiscales) pour les justificatifs.</p>
+</div>
+
+<h3>Ce que BuzzCut ne collecte pas</h3>
+<ul>
+<li>ni e-mail, ni numéro de téléphone, ni mot de passe, ni nom réel pour le compte (seul le formulaire Support propose, facultativement, de laisser un moyen de vous répondre) ;</li>
+<li>pas de position précise ni d’historique de déplacements : seul le nom de la ville de chaque clip, si vous l’autorisez (voir ci-dessus) ;</li>
+<li>pas d’accès à vos contacts ;</li>
+<li>pas d’identifiant publicitaire, pas de publicité, pas de suivi entre applications ou sites ;</li>
+<li>aucun kit d’analyse d’audience (analytics), aucun SDK tiers de mesure ou de publicité ;</li>
+<li>aucune décision automatisée produisant des effets juridiques à votre égard, aucun profilage.</li>
+</ul>
+
+<h2 id="fr-4">4. Durées de conservation</h2>
+<ul>
+<li><strong>Compte</strong> (pseudonyme, identifiant anonyme, date de création) : tant que le compte existe. La suppression du compte dans l’application efface immédiatement toutes les données qui lui sont liées, à l’exception des messages déjà envoyés au support (voir ci-dessous).</li>
+<li><strong>Photos de profil et de BuzzRoom</strong> : jusqu’à leur remplacement ou leur suppression, et au plus tard à la suppression du compte (photo de profil) ou de la BuzzRoom (photo de BuzzRoom).</li>
+<li><strong>Clips</strong> : jusqu’à la fabrication du film, puis supprimés. Supprimés aussi en cas d’exclusion de la BuzzRoom.</li>
+<li><strong>Ville de tournage et décalage horaire</strong> : jusqu’à la fabrication du film, puis effacés du serveur (ils ne restent qu’incrustés dans le film).</li>
+<li><strong>Films</strong> : 48 heures après leur fabrication, puis supprimés du serveur.</li>
+<li><strong>BuzzRooms, appartenance, horodatages, temps par cut</strong> : tant que la BuzzRoom existe, et au plus tard à la suppression de votre compte pour ce qui vous concerne.</li>
+<li><strong>Jetons de notification</strong> : jusqu’au retrait de l’autorisation ou à la suppression du compte.</li>
+<li><strong>Messages au support</strong> : <mark class="todo">À COMPLÉTER : durée de conservation des messages au support</mark> ; conservés après la suppression du compte, sans lien avec lui.</li>
+<li><strong>Journaux techniques</strong> : <mark class="todo">À COMPLÉTER : durée de conservation des journaux techniques du serveur (recommandation CNIL : 6 mois au plus, 12 mois maximum)</mark></li>
+<li><strong>Preuves d’achat</strong> (fonction future) : tant que le compte existe pour maintenir l’option débloquée ; les justificatifs comptables sont conservés le temps imposé par la loi (10 ans en France).</li>
+</ul>
+<p>Les sauvegardes techniques du serveur, s’il en existe, sont écrasées selon un cycle court, de sorte que les données supprimées disparaissent aussi des sauvegardes dans un délai raisonnable.</p>
+
+<h2 id="fr-5">5. Destinataires des données</h2>
+<ul>
+<li><strong>Les autres membres de vos BuzzRooms</strong> voient votre pseudonyme, votre photo de profil, la photo de la BuzzRoom, et le film qui contient vos clips. Ils peuvent télécharger le film et le conserver.</li>
+<li><strong>L’hébergeur du serveur</strong>, qui stocke les données pour notre compte en qualité de sous-traitant : prestataire d’hébergement situé dans l’Union européenne (<mark class="todo">À COMPLÉTER : à préciser : nom, adresse et pays de l’hébergeur du serveur, par exemple OVH, France</mark>). Le serveur n’est pas encore en service ; cette politique sera mise à jour avec l’identité de l’hébergeur retenu.</li>
+<li><strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublin 4, Irlande), sous-traitant envisagé pour l’acheminement des notifications push via Firebase Cloud Messaging (fonction prévue) ; seul le jeton de notification lui est transmis.</li>
+<li><strong>Apple et Google</strong>, en tant qu’opérateurs des boutiques, pour les achats intégrés (fonction future), selon leurs propres politiques de confidentialité.</li>
+<li><strong>Google (Android) et Apple (iOS)</strong>, opérateurs du service de localisation du téléphone, auquel l’application demande le nom de la ville : ils reçoivent la position approximative, selon leurs propres politiques de confidentialité. Le serveur de BuzzCut ne reçoit que le nom de la ville.</li>
+</ul>
+<p>Nous ne vendons pas vos données et ne les transmettons à aucun annonceur, courtier en données ou réseau social. Elles peuvent être communiquées à une autorité si la loi nous y oblige.</p>
+
+<h2 id="fr-6">6. Transferts hors de l’Union européenne</h2>
+<p>Les données sont hébergées dans l’Union européenne : prestataire d’hébergement situé dans l’Union européenne (<mark class="todo">À COMPLÉTER : à préciser : nom, adresse et pays de l’hébergeur du serveur, par exemple OVH, France</mark>). <strong>Aucun transfert de données hors de l’Union européenne n’a lieu tant que l’hébergeur est situé dans l’Union européenne.</strong> Si l’éditeur venait à changer d’hébergeur pour un prestataire situé hors de l’Union, cette politique serait mise à jour avec le mécanisme de transfert applicable.</p>
+<p>Pour les notifications push (fonction prévue), le sous-traitant envisagé est Google Ireland Limited, établie dans l’Union européenne. L’acheminement par Firebase Cloud Messaging peut impliquer un traitement aux États-Unis par des entités du groupe Google ; ces transferts sont encadrés par les clauses contractuelles types adoptées par la Commission européenne, intégrées aux conditions de traitement des données de Google, et par le cadre de protection des données UE–États-Unis (<em>EU–US Data Privacy Framework</em>) auquel Google déclare adhérer. Seul le jeton de notification, sans contenu personnel, est concerné.</p>
+
+<h2 id="fr-7">7. Vos droits</h2>
+<p>Vous disposez des droits suivants sur vos données :</p>
+<ul>
+<li><strong>Accès</strong> : obtenir une copie des données qui vous concernent ;</li>
+<li><strong>Rectification</strong> : corriger votre pseudonyme ou vos photos (possible directement dans l’application) ;</li>
+<li><strong>Effacement</strong> : supprimer votre compte et toutes ses données (possible directement dans l’application : <em>Profil → Supprimer le compte</em>) ;</li>
+<li><strong>Portabilité</strong> : recevoir vos données dans un format structuré et couramment utilisé ;</li>
+<li><strong>Opposition</strong> : vous opposer, pour des raisons tenant à votre situation particulière, aux traitements fondés sur notre intérêt légitime ;</li>
+<li><strong>Limitation</strong> : demander le gel temporaire d’un traitement ;</li>
+<li><strong>Retrait du consentement</strong> : à tout moment, pour les photos et les notifications, sans remettre en cause la licéité des traitements antérieurs ;</li>
+<li><strong>Directives post-mortem</strong> : définir le sort de vos données après votre décès (article 85 de la loi Informatique et Libertés) ;</li>
+<li><strong>Réclamation</strong> : saisir la Commission nationale de l’informatique et des libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — <a href="https://www.cnil.fr" rel="noopener">www.cnil.fr</a>.</li>
+</ul>
+<h3>Comment exercer vos droits</h3>
+<p>Écrivez à <mark class="todo">À COMPLÉTER : adresse e-mail de contact / support</mark>. Nous répondons dans un délai d’un mois, prolongeable de deux mois pour les demandes complexes.</p>
+<p>Point important : votre compte est anonyme. Nous ne connaissons ni votre nom, ni votre e-mail, et nous ne pouvons pas retrouver un compte à partir d’une identité civile. Pour traiter votre demande, nous pourrons vous demander de prouver que vous contrôlez le compte concerné, par exemple en envoyant la demande depuis l’application ou en indiquant l’identifiant de compte affiché dans l’application. La façon la plus simple et la plus rapide d’exercer votre droit d’effacement reste la suppression du compte dans l’application, qui est immédiate et définitive.</p>
+
+<h2 id="fr-8">8. Mineurs</h2>
+<p>BuzzCut est réservé aux personnes âgées d’au moins <strong>15 ans</strong>, âge à partir duquel un mineur peut consentir seul au traitement de ses données en France (article 45 de la loi Informatique et Libertés). Nous ne demandons pas de date de naissance et ne vérifions pas l’âge ; si nous apprenons qu’un compte appartient à une personne de moins de 15 ans sans l’accord d’un titulaire de l’autorité parentale, nous le supprimons. Les parents ou tuteurs peuvent nous contacter à <mark class="todo">À COMPLÉTER : adresse e-mail de contact / support</mark>.</p>
+
+<h2 id="fr-9">9. Personnes filmées</h2>
+<p>Les clips peuvent montrer d’autres personnes que vous. Chaque membre est responsable d’obtenir l’accord des personnes qu’il filme (voir les <a href="terms.html" data-nav="terms.html">conditions d’utilisation</a>). Si vous apparaissez dans un film BuzzCut sans y avoir consenti, écrivez-nous à <mark class="todo">À COMPLÉTER : adresse e-mail de contact / support</mark> : nous pouvons retirer le film du serveur tant qu’il s’y trouve (48 heures au plus) et agir auprès des membres concernés.</p>
+
+<h2 id="fr-10">10. Cookies et traceurs</h2>
+<p>L’application BuzzCut n’utilise aucun cookie ni traceur. Le présent site (pages d’information juridique) est un site statique qui ne dépose aucun cookie, ne charge aucune ressource externe et ne contient aucun outil de mesure d’audience. Votre choix de langue sur ces pages n’est pas enregistré. Le site est hébergé par GitHub Pages : GitHub peut enregistrer l’adresse IP des visiteurs dans ses journaux techniques, conformément à sa propre <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">déclaration de confidentialité</a>.</p>
+
+<h2 id="fr-11">11. Sécurité</h2>
+<p>Les échanges entre l’application et le serveur sont chiffrés (HTTPS/TLS). L’accès au serveur est restreint à l’éditeur. Les films sont supprimés automatiquement après 48 heures et les clips dès l’assemblage, ce qui limite la quantité de vidéos stockées à tout moment. Le compte étant anonyme, une fuite éventuelle n’exposerait ni nom, ni mot de passe, ni e-mail lié au compte (seul un moyen de réponse laissé volontairement dans un message au support pourrait l’être). Aucun système n’est toutefois infaillible ; en cas de violation de données présentant un risque pour vous, nous en informerons la CNIL et, si le risque est élevé, les personnes concernées, conformément aux articles 33 et 34 du RGPD.</p>
+
+<h2 id="fr-12">12. Modifications</h2>
+<p>Cette politique peut évoluer, notamment lorsque les notifications et les achats intégrés seront activés. Chaque version est numérotée et datée en haut de la page, avec un historique des changements. En cas de modification substantielle, l’application vous en informera.</p>
+
+<h2 id="fr-13">13. Contact</h2>
+<p>Éditeur de BuzzCut : un particulier, développeur indépendant établi en France, qui édite BuzzCut à titre non professionnel.<br>Contact : <mark class="todo">À COMPLÉTER : adresse e-mail de contact / support</mark></p>
+<p>Voir aussi les <a href="terms.html" data-nav="terms.html">conditions générales d’utilisation</a> et les <a href="notice.html" data-nav="notice.html">mentions légales</a>.</p>
+
+</section>
+<section class="en" lang="en">
+<h1>Privacy policy</h1>
+<p class="meta"><b>Version 3 — 23 October 2026</b><br>Changelog: v3 (23 October 2026) — city of filming; v2 (9 October 2026) — support messages; v1 (8 October 2026) — first draft.</p>
+
+<p>This policy explains which personal data the <strong>BuzzCut</strong> mobile app (iOS and Android) processes, why, for how long, and what your rights are. It is written in accordance with the General Data Protection Regulation (GDPR, Regulation (EU) 2016/679) and the French Data Protection Act (<em>loi « Informatique et Libertés »</em> of 6 January 1978, as amended).</p>
+<p>In short: BuzzCut asks for no e-mail, no phone number and no password to create an account (a way to answer you is asked for, optionally, only if you write to us from the Support form). There are no ads, no cross-app tracking, no analytics SDK, no precise location (only the name of the city you film in, if you allow it) and no access to your contacts. We keep the bare minimum needed to make your films, and we delete videos quickly.</p>
+
+<h2 id="en-1">1. Data controller</h2>
+<p>The data controller is the publisher of the app: a private individual, an independent developer established in France, who publishes BuzzCut on a non-professional basis.</p>
+<p>In accordance with Article 6-III-2 of French Act no. 2004-575 of 21 June 2004 (LCEN), the publisher, who acts on a non-professional basis, does not publish their name or address; these identification details have been given to the hosts, which keep them available to the authorities. The only public contact is the following e-mail address: <mark class="todo">TO BE COMPLETED: contact / support e-mail address</mark>.</p>
+<p>No Data Protection Officer (DPO) has been appointed, as this is not mandatory for this activity. Any question about your data can be sent to the contact above.</p>
+
+<h2 id="en-2">2. What BuzzCut does</h2>
+<p>BuzzCut lets a group of people (a “BuzzRoom”) film short video clips from one shared “battery” of recording time. When the battery runs out, the server patches every clip into one film (a “BuzzCut”, 720 × 1280) with a burnt-in camcorder overlay (room name, logo) and an outro. The film is available to members for 48 hours and then deleted from the server. Downloaded copies stay on the phones.</p>
+
+<h2 id="en-3">3. Data processed, purposes and legal bases</h2>
+<p>The legal bases refer to Article 6(1) GDPR: <em>performance of the contract</em> (point b: providing the service you request by using the app), <em>consent</em> (point a) and <em>legitimate interest</em> (point f).</p>
+
+<div class="cat">
+<h3>Account</h3>
+<p><b>Data:</b> the username you choose, an anonymous account id generated by the app and stored on your phone, the account creation date.</p>
+<p><b>Purpose:</b> create and recognise your account, show you to other members under your username.</p>
+<p><b>Legal basis:</b> performance of the contract.</p>
+<p><b>Note:</b> no e-mail, phone number or password is collected for the account. The username is free-form; avoid using your full name if you do not want other members to identify you.</p>
+</div>
+
+<div class="cat">
+<h3>Profile and BuzzRoom photos</h3>
+<p><b>Data:</b> the profile photo you pick and, if you add one, a BuzzRoom photo. Both are optional.</p>
+<p><b>Purpose:</b> personalise your profile and BuzzRooms; show these images to members.</p>
+<p><b>Legal basis:</b> consent, given by adding the photo and withdrawable at any time by removing or replacing it.</p>
+</div>
+
+<div class="cat">
+<h3>Video clips</h3>
+<p><b>Data:</b> the clips (picture and sound) you film in a BuzzRoom, with their duration, timestamp and the battery time used per cut. Clips may contain the image and voice of other people: see section 9 and the <a href="terms.html" data-nav="terms.html">terms of use</a>.</p>
+<p><b>Purpose:</b> assembling the BuzzRoom’s film.</p>
+<p><b>Legal basis:</b> performance of the contract.</p>
+<p><b>Note:</b> clips are transient: they are deleted from the server as soon as the film is made, or when the room leader kicks you out of the BuzzRoom.</p>
+</div>
+
+<div class="cat">
+<h3>City of filming</h3>
+<p><b>Data:</b> the name of the city each clip is filmed in, and your phone’s time zone offset, to print each clip’s city and local date on it, like a camcorder.</p>
+<p><b>Purpose:</b> the film’s overlay (each clip’s city and date).</p>
+<p><b>Legal basis:</b> your consent, given through the phone’s location permission, asked once and withdrawable at any time in the phone’s settings (<em>Profile → Phone settings</em>). Without it, clips read UNKNOWN.</p>
+<p><b>Note:</b> the location, approximate only, is used only while the record screen is open. To get the city name, the phone’s location service sends this approximate position to Google (Android) or Apple (iOS), which return the city name; only that name is sent to BuzzCut, never your position. It is burnt into the film and deleted from the server as soon as the film is made.</p>
+</div>
+
+<div class="cat">
+<h3>Films (BuzzCuts)</h3>
+<p><b>Data:</b> the film assembled from the members’ clips, with the burnt-in overlay (room name, each clip’s city and date, battery level, BUZZCUT) and the outro.</p>
+<p><b>Purpose:</b> letting the BuzzRoom’s members watch and download the film.</p>
+<p><b>Legal basis:</b> performance of the contract.</p>
+<p><b>Note:</b> the film is deleted from the server 48 hours after it is made. Copies downloaded by members to their phones are no longer under our control.</p>
+</div>
+
+<div class="cat">
+<h3>BuzzRooms and activity</h3>
+<p><b>Data:</b> the BuzzRooms you are a member or leader of, the room’s name and photo, the battery state, timestamps (creation, cuts, film creation), recording time per cut.</p>
+<p><b>Purpose:</b> running the BuzzRoom (sharing the battery, knowing who is a member, triggering the film, showing the film to the right people).</p>
+<p><b>Legal basis:</b> performance of the contract.</p>
+</div>
+
+<div class="cat">
+<h3>“Film ready” notifications (planned feature)</h3>
+<p><b>Data:</b> a push notification token specific to your device, issued by the Firebase Cloud Messaging (FCM) service of Google Ireland Limited, which the publisher plans to use; on iOS, final delivery goes through Apple’s notification service (APNs).</p>
+<p><b>Purpose:</b> telling you when a film is ready.</p>
+<p><b>Legal basis:</b> consent, given when you allow notifications in the app or in the phone settings; withdrawable at any time through the same settings.</p>
+<p><b>Note:</b> this feature is not active yet. The token holds no information about your identity; it is erased when you withdraw permission or delete your account.</p>
+</div>
+
+<div class="cat">
+<h3>Server technical data</h3>
+<p><b>Data:</b> your device’s IP address, the time and nature of requests, device or system type, error codes, in the server’s technical logs.</p>
+<p><b>Purpose:</b> security of the service (detecting abuse, outages and attacks), technical diagnosis.</p>
+<p><b>Legal basis:</b> legitimate interest in keeping the service secure and working. These logs are used neither for profiling, nor for advertising, nor for usage statistics.</p>
+<p><b>Retention:</b> <mark class="todo">TO BE COMPLETED: retention period of the server technical logs (CNIL recommendation: 6 months at most, 12 months maximum)</mark></p>
+</div>
+
+<div class="cat">
+<h3>Support messages</h3>
+<p><b>Data:</b> when you use the Support form (Profile &gt; Support): the kind of message (bug, idea, help), the text you write and, if you choose to give it, a way to answer you (often an e-mail address). The app automatically attaches, and shows under the form before sending: the app version, the system and its version (for example Android 15), the app language and your account id. The message is stored with the time it was sent.</p>
+<p><b>Purpose:</b> answering your request, fixing reported bugs, improving the app. A limited number of messages per hour is accepted per account, to prevent abuse.</p>
+<p><b>Legal basis:</b> legitimate interest in helping users and fixing the app; the way to answer you is optional and given on your own initiative.</p>
+<p><b>Retention:</b> <mark class="todo">TO BE COMPLETED: retention period of support messages (for example 12 months after the last exchange)</mark>. <strong>Deleting your account does not delete the messages already sent to support</strong>: they are no longer linked to an account, but their content, and the way to answer you if one was given, are kept until the end of that period. You can ask for them to be erased by writing to us (section 7).</p>
+<p>No e-mail is sent automatically; the message is passed on to no third party.</p>
+</div>
+
+<div class="cat">
+<h3>In-app purchases (future feature)</h3>
+<p><b>Data:</b> when offered, one-time purchases (for example a “Clean” film without overlay, or visual styles) will be handled by Apple’s App Store or Google Play. BuzzCut receives no payment data: only a proof of purchase (receipt or entitlement) used to unlock the option on your account.</p>
+<p><b>Purpose:</b> providing the purchased option.</p>
+<p><b>Legal basis:</b> performance of the contract; legal obligations (accounting and tax) for the records.</p>
+</div>
+
+<h3>What BuzzCut does not collect</h3>
+<ul>
+<li>no e-mail, no phone number, no password, no real name for the account (only the Support form offers, optionally, to leave a way to answer you);</li>
+<li>no precise location and no movement history: only the name of each clip’s city, if you allow it (see above);</li>
+<li>no access to your contacts;</li>
+<li>no advertising identifier, no ads, no tracking across apps or websites;</li>
+<li>no analytics SDK, no third-party measurement or advertising SDK;</li>
+<li>no automated decision with legal effects on you, no profiling.</li>
+</ul>
+
+<h2 id="en-4">4. Retention periods</h2>
+<ul>
+<li><strong>Account</strong> (username, anonymous id, creation date): as long as the account exists. Deleting the account in the app immediately erases all data linked to it, except the messages already sent to support (see below).</li>
+<li><strong>Profile and BuzzRoom photos</strong>: until replaced or removed, and at the latest when the account (profile photo) or the BuzzRoom (room photo) is deleted.</li>
+<li><strong>Clips</strong>: until the film is made, then deleted. Also deleted when you are kicked out of the BuzzRoom.</li>
+<li><strong>City of filming and time zone offset</strong>: until the film is made, then deleted from the server (they remain only burnt into the film).</li>
+<li><strong>Films</strong>: 48 hours after they are made, then deleted from the server.</li>
+<li><strong>BuzzRooms, membership, timestamps, time per cut</strong>: as long as the BuzzRoom exists, and at the latest when your account is deleted for what concerns you.</li>
+<li><strong>Notification tokens</strong>: until permission is withdrawn or the account deleted.</li>
+<li><strong>Support messages</strong>: <mark class="todo">TO BE COMPLETED: retention period of support messages</mark>; kept after the account is deleted, unlinked from it.</li>
+<li><strong>Technical logs</strong>: <mark class="todo">TO BE COMPLETED: retention period of the server technical logs (CNIL recommendation: 6 months at most, 12 months maximum)</mark></li>
+<li><strong>Proofs of purchase</strong> (future feature): as long as the account exists, to keep the option unlocked; accounting records are kept for the period required by law (10 years in France).</li>
+</ul>
+<p>Technical backups of the server, if any, are overwritten on a short cycle, so that deleted data also disappears from backups within a reasonable time.</p>
+
+<h2 id="en-5">5. Recipients</h2>
+<ul>
+<li><strong>The other members of your BuzzRooms</strong> see your username, your profile photo, the room photo, and the film that contains your clips. They can download the film and keep it.</li>
+<li><strong>The server host</strong>, which stores the data on our behalf as a processor: hosting provider located in the European Union (<mark class="todo">TO BE COMPLETED: to be specified: name, address and country of the server host, for example OVH, France</mark>). The server is not in service yet; this policy will be updated with the identity of the chosen host.</li>
+<li><strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublin 4, Ireland), planned processor for delivering push notifications through Firebase Cloud Messaging (planned feature); only the notification token is sent to it.</li>
+<li><strong>Apple and Google</strong>, as store operators, for in-app purchases (future feature), under their own privacy policies.</li>
+<li><strong>Google (Android) and Apple (iOS)</strong>, as operators of the phone’s location service, which the app asks for the city name: they receive the approximate position, under their own privacy policies. BuzzCut’s server only receives the city name.</li>
+</ul>
+<p>We do not sell your data and do not pass it to any advertiser, data broker or social network. It may be disclosed to an authority if the law requires it.</p>
+
+<h2 id="en-6">6. Transfers outside the European Union</h2>
+<p>Data is hosted in the European Union: hosting provider located in the European Union (<mark class="todo">TO BE COMPLETED: to be specified: name, address and country of the server host, for example OVH, France</mark>). <strong>No transfer of data outside the European Union takes place as long as the host is located in the European Union.</strong> Should the publisher move to a host located outside the EU, this policy would be updated with the applicable transfer mechanism.</p>
+<p>For push notifications (planned feature), the planned processor is Google Ireland Limited, established in the European Union. Delivery through Firebase Cloud Messaging may involve processing in the United States by Google group entities; such transfers are governed by the standard contractual clauses adopted by the European Commission, incorporated into Google’s data processing terms, and by the EU–US Data Privacy Framework, to which Google states it adheres. Only the notification token, with no personal content, is concerned.</p>
+
+<h2 id="en-7">7. Your rights</h2>
+<p>You have the following rights over your data:</p>
+<ul>
+<li><strong>Access</strong>: obtain a copy of the data concerning you;</li>
+<li><strong>Rectification</strong>: correct your username or photos (possible directly in the app);</li>
+<li><strong>Erasure</strong>: delete your account and all its data (possible directly in the app: <em>Profile → Delete account</em>);</li>
+<li><strong>Portability</strong>: receive your data in a structured, commonly used format;</li>
+<li><strong>Objection</strong>: object, on grounds relating to your particular situation, to processing based on our legitimate interest;</li>
+<li><strong>Restriction</strong>: ask for a processing to be temporarily frozen;</li>
+<li><strong>Withdrawal of consent</strong>: at any time, for photos and notifications, without affecting the lawfulness of earlier processing;</li>
+<li><strong>Post-mortem instructions</strong>: decide what happens to your data after your death (Article 85 of the French Data Protection Act);</li>
+<li><strong>Complaint</strong>: lodge a complaint with the French supervisory authority, the CNIL (Commission nationale de l’informatique et des libertés), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, France — <a href="https://www.cnil.fr" rel="noopener">www.cnil.fr</a>, or with the supervisory authority of your own EU country.</li>
+</ul>
+<h3>How to exercise your rights</h3>
+<p>Write to <mark class="todo">TO BE COMPLETED: contact / support e-mail address</mark>. We answer within one month, extendable by two months for complex requests.</p>
+<p>Important: your account is anonymous. We know neither your name nor your e-mail, and we cannot find an account from a civil identity. To handle your request we may ask you to prove that you control the account concerned, for example by sending the request from the app or by quoting the account id shown in the app. The simplest and fastest way to exercise your right to erasure remains deleting the account in the app, which is immediate and final.</p>
+
+<h2 id="en-8">8. Minors</h2>
+<p>BuzzCut is reserved for people aged <strong>15 or over</strong>, the age from which a minor may consent alone to the processing of their data in France (Article 45 of the French Data Protection Act). We do not ask for a date of birth and do not verify age; if we learn that an account belongs to someone under 15 without the agreement of a holder of parental authority, we delete it. Parents or guardians can contact us at <mark class="todo">TO BE COMPLETED: contact / support e-mail address</mark>.</p>
+
+<h2 id="en-9">9. People who appear in clips</h2>
+<p>Clips may show people other than you. Each member is responsible for obtaining the agreement of the people they film (see the <a href="terms.html" data-nav="terms.html">terms of use</a>). If you appear in a BuzzCut film without having agreed to it, write to <mark class="todo">TO BE COMPLETED: contact / support e-mail address</mark>: we can remove the film from the server while it is still there (48 hours at most) and act towards the members concerned.</p>
+
+<h2 id="en-10">10. Cookies and trackers</h2>
+<p>The BuzzCut app uses no cookies or trackers. This website (legal information pages) is a static site that sets no cookies, loads no external resource and contains no audience measurement tool. Your language choice on these pages is not stored. The site is hosted on GitHub Pages: GitHub may record visitors’ IP addresses in its technical logs, under its own <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">privacy statement</a>.</p>
+
+<h2 id="en-11">11. Security</h2>
+<p>Exchanges between the app and the server are encrypted (HTTPS/TLS). Access to the server is restricted to the publisher. Films are deleted automatically after 48 hours and clips as soon as they are assembled, which limits the amount of video stored at any time. Because the account is anonymous, a breach would expose no name, no password and no e-mail tied to the account (only a way to answer you, given on purpose in a support message, could be). No system is infallible, however; in the event of a data breach that puts you at risk, we will notify the CNIL and, if the risk is high, the people concerned, as required by Articles 33 and 34 GDPR.</p>
+
+<h2 id="en-12">12. Changes</h2>
+<p>This policy may change, in particular when notifications and in-app purchases are switched on. Each version is numbered and dated at the top of the page, with a changelog. The app will inform you of any material change.</p>
+
+<h2 id="en-13">13. Contact</h2>
+<p>Publisher of BuzzCut: a private individual, an independent developer established in France, who publishes BuzzCut on a non-professional basis.<br>Contact: <mark class="todo">TO BE COMPLETED: contact / support e-mail address</mark></p>
+<p>See also the <a href="terms.html" data-nav="terms.html">terms of use</a> and the <a href="notice.html" data-nav="notice.html">legal notice</a>.</p>
+
+</section>
+</main>
+<footer>
+<div class="fr" lang="fr"><p>BuzzCut — documents juridiques. En cas de divergence entre les versions, la version française fait foi.</p><p>Ce site statique ne dépose aucun cookie et ne charge aucune ressource externe.</p></div>
+<div class="en" lang="en"><p>BuzzCut — legal documents. If the versions differ, the French version prevails.</p><p>This static site sets no cookies and loads no external resource.</p></div>
+</footer>
+<script>
+(function(){
+  var html=document.documentElement;
+  var titles={fr:"Politique de confidentialité — BuzzCut",en:"Privacy policy — BuzzCut"};
+  var buttons=document.querySelectorAll('[data-set-lang]');
+  var navs=document.querySelectorAll('a[data-nav]');
+  function set(l){
+    html.setAttribute('data-lang',l);html.lang=l;document.title=titles[l];
+    for(var i=0;i<buttons.length;i++){buttons[i].setAttribute('aria-pressed',buttons[i].getAttribute('data-set-lang')===l?'true':'false');}
+    for(var j=0;j<navs.length;j++){navs[j].href=navs[j].getAttribute('data-nav')+'#'+l;}
+  }
+  var h=location.hash.replace('#','');
+  var l=(h==='en'||h==='fr')?h:(((navigator.language||'fr').toLowerCase().indexOf('fr')===0)?'fr':'en');
+  set(l);
+  for(var k=0;k<buttons.length;k++){buttons[k].addEventListener('click',function(e){var v=e.currentTarget.getAttribute('data-set-lang');set(v);try{history.replaceState(null,'','#'+v);}catch(x){}});}
+})();
+</script>
+</body>
+</html>
